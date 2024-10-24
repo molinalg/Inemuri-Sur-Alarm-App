@@ -1,0 +1,93 @@
+/* Estilo de la página en general y del mapa */
+body {
+  display: grid;
+  background-color: #2D2D2D;
+  grid-template-rows: 10% 10% 80%;
+  padding: 0;
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+#map {
+  width: auto;
+  height: 100%;
+}
+/* Estilos del encabezado */
+.encabezado {
+  background-color: #000000;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 2em;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.contImagen {
+  height: 70%;
+  width: auto;
+  padding-left: 2%;
+}
+
+.imagen {
+  height: 100%;
+  width: auto;
+}
+
+
+/* Sección donde se encuentra la zona de selección de destinos */
+.seleccion {
+  text-align: center;
+  align-self: center;
+}
+
+.textoSeleccion {
+  font-size: 1.5em;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  font-weight: bold;
+}
+
+.casilla {
+  font-size: 1em;
+  text-align: center;
+  background-color: #000000;
+  color: white;
+  border: 1px solid #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+
+/* Adaptaciones a distintos tamaños de pantalla */
+@media screen and (max-width: 768px) {
+  /* Atributo de cuadrícula para organizar los elementos */
+  h1 {
+    font-size: 1.5em;
+  }
+  .textoSeleccion {
+    font-size: 1em;
+  }
+  .casilla {
+    font-size: 0.8em;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  /* Atributo de cuadrícula para organizar los elementos */
+  h1 {
+    font-size: 1em;
+  }
+  .textoSeleccion {
+    font-size: 0.8em;
+  }
+  .casilla {
+    font-size: 0.6em;
+  }
+}

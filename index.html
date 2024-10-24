@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Inemuri Sur</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+    integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+  <link rel='stylesheet' href='style.css'>
+
+  <!-- Make sure you put this AFTER Leaflet's CSS -->
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+    integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin="">
+    </script>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <!-- Encabezado de la página (contiene título e imagen de estado) -->
+  <div class = "encabezado">
+    <h1>Inemuri Sur</h1>
+    <!-- Imagen para controlar el estado de la alarma -->
+    <div class = "contImagen">
+      <img id = "alarma" class = "imagen" src="images/off.png" alt="Imagen de estado de alarma" onclick = "apagar()">
+    </div>
+  </div>
+
+  <!-- Lista despleglable con las paradas a elegir -->
+  <form class = "seleccion" id="formulario">
+    <label class = "textoSeleccion" for="parada">Selecciona un Destino:        </label>
+    <select class = "casilla" id="parada">
+      <option value="Alcorcón Central">Alcorcón Central</option>
+      <option value="Alonso De Mendoza">Alonso De Mendoza</option>
+      <option value="Arroyo Culebro">Arroyo Culebro</option>
+      <option value="Casa Del Reloj">Casa Del Reloj</option>
+      <option value="El Carrascal">El Carrascal</option>
+      <option value="Fuenlabrada Central">Fuenlabrada Central</option>
+      <option value="Hospital De Fuenlabrada">Hospital De Fuenlabrada</option>
+      <option value="Juan De La Cierva">Juan De La Cierva</option>
+      <option value="Los Espartales">Los Espartales</option>
+      <option value="Leganés Central">Leganés Central</option>
+      <option value="Manuela Malasaña">Manuela Malasaña</option>
+      <option value="Pradillo">Pradillo</option>
+      <option value="Puerta Del Sur">Puerta Del Sur</option>
+      <option value="Universidad Rey Juan Carlos">Universidad Rey Juan Carlos</option>
+    </select>
+    <input class = "casilla" type = "button" value="Confirmar" onclick="fijarDestino()"/>
+  </form>
+    
+  </div>
+  
+  <!-- Mapa de Leaflet -->
+  <div id="map"></div>
+
+  <script src="script.js">
+
+  </script>
+  
+</body>
+
+</html>
